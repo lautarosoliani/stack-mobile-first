@@ -1,0 +1,94 @@
+/* 
+(BOX MODEL)
+
+margin
+border: 1px solid black; 
+padding
+
+content -> h1 i.e.
+
+padding
+border: 1px solid black; 
+margin
+*/
+
+/* 
+(PERCENTAGES NO PIXELS)
+
+Body has 100% by default, so establish its 
+width and height always with percentages.
+Never pixels
+Percentages is refering always
+to his parent element */
+
+/* 
+(MARGIN AUTO 0)
+When you have specified a width on the object that 
+you have applied margin: 0 auto to, the object 
+will sit centrally within it's parent container.
+See here: 
+https://stackoverflow.com/questions/3170772/what-does-auto-do-in-margin-0-auto 
+*/
+
+/* 
+(box-sizing: border-box;)
+
+Content, padding, and border will not be more
+than the width and heigth, see here: 
+ https://stackoverflow.com/questions/31879820/what-is-the-box-sizing-property-for-in-css
+*/
+
+/* 
+(EM)
+
+2 scenarios:
+
+em is always looking at the font-size of his parent
+by default font-size is 16px = 1 em
+
+however, when establishing padding, border or margin
+in ems, is looking at its own font-size, which can 
+be declared inside as 2em, so p,b and m wont be
+looking at his parent but to his own font-size
+*/
+
+/* 
+(REM -> root em)
+
+only 1 scenario
+
+rem is always looking at the font-size of the root
+recommended for buttons, see here:
+https://www.youtube.com/watch?v=_-aDOAMmDHI&ab_channel=KevinPowell 
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: antiquewhite;
+}
+
+/* .parent {
+  background-color: darkslateblue;
+  padding: 50px;
+
+  margin: 0 auto;
+  width: 80%;
+}
+
+.child {
+  background-color: lightblue;
+  width: 50%;
+  height: 90%;
+} */
+
+.container {
+  background-color: darkslateblue;
+  color: whitesmoke;
+
+  margin: 0 auto;
+  width: 80%;
+}
