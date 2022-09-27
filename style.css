@@ -14,12 +14,11 @@ margin
 
 /* 
 (PERCENTAGES NO PIXELS)
-
 Body has 100% by default, so establish its 
 width and height always with percentages.
-Never pixels
-Percentages is refering always
-to his parent element */
+Never pixels. Percentages is refering always
+to his parent element 
+*/
 
 /* 
 (MARGIN AUTO 0)
@@ -32,7 +31,6 @@ https://stackoverflow.com/questions/3170772/what-does-auto-do-in-margin-0-auto
 
 /* 
 (box-sizing: border-box;)
-
 Content, padding, and border will not be more
 than the width and heigth, see here: 
  https://stackoverflow.com/questions/31879820/what-is-the-box-sizing-property-for-in-css
@@ -40,7 +38,6 @@ than the width and heigth, see here:
 
 /* 
 (EM)
-
 2 scenarios:
 
 em is always looking at the font-size of his parent
@@ -62,33 +59,59 @@ recommended for buttons, see here:
 https://www.youtube.com/watch?v=_-aDOAMmDHI&ab_channel=KevinPowell 
 */
 
+/* 
+
+(MEDIA QUERIES)
+template:
+@media () {
+}
+
+important: cascade style sheets rules also apply
+to media queries, so, be sure to wirtte them after
+all the css code
+
+@media (min-width: x px){
+    // recommended for mobile first
+}
+@media (max-width: x px){
+    // recommended for desktop first
+}
+
+see here: https://www.youtube.com/watch?v=2KL-z9A56SQ&ab_channel=KevinPowell 
+*/
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background-color: antiquewhite;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: lemonchiffon;
 }
 
-/* .parent {
-  background-color: darkslateblue;
-  padding: 50px;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background: coral;
 
+  width: 90%;
   margin: 0 auto;
-  width: 80%;
+
+  padding: 2em;
+  height: 90%;
 }
 
 .child {
-  background-color: lightblue;
-  width: 50%;
-  height: 90%;
-} */
+  background-color: lightskyblue;
+  color: white;
+  width: 20%;
+  margin: 2%;
+  padding: 2%;
+}
 
-.container {
-  background-color: darkslateblue;
-  color: whitesmoke;
-
-  margin: 0 auto;
-  width: 80%;
+@media (max-width: 600px) {
+  .child {
+    width: 400px;
+  }
 }
